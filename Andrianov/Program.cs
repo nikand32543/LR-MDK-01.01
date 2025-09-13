@@ -10,6 +10,7 @@ namespace Andrianov
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("GitHub top top СКЕБОБ");
         }
     }
 }
