@@ -20,6 +20,14 @@ namespace Array_test
             {
                 Console.WriteLine("Элементы массива " + n);
             }
+
+            string[] array = new string[3];
+            array[2] = massiv[0];
+            array[1] = massiv[1];
+            array[0] = massiv[2];
+
+
+
         }
     }
 }
