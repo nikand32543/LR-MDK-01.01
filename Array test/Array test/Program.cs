@@ -14,6 +14,8 @@ namespace Array_test
             massiv[0] = "La";
             massiv[1] = "Ma";
             massiv[2] = "Si";
+
+            massiv[1] = "GiGi";
         }
     }
 }
