@@ -29,17 +29,15 @@ namespace Array_test
             int[] mass = new int[10000];
             for(int i = 0; i < mass.Length;i++)
             {
-                mass[i] = 1+i;
+                mass[i] = (1 + i) * 2;
             }
 
             Console.Write("[");
             for (int i = 0; i < mass.Length - 1; i++)
             {
-
                 Console.Write(mass[i] + ",");
-                
             }
-            Console.Write(mass.Length);
+            Console.Write(mass.Length * 2);
             Console.WriteLine("]");
         }
     }
