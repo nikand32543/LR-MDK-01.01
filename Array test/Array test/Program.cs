@@ -16,6 +16,10 @@ namespace Array_test
             massiv[2] = "Si";
 
             massiv[1] = "GiGi";
+            foreach(string n in massiv)
+            {
+                Console.WriteLine("Элементы массива " + n);
+            }
         }
     }
 }
