@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,8 +19,24 @@ namespace Lab_1
             {
                 array[i] = Convert.ToInt32(Console.ReadLine());
             }
-
-            
+            int product = 1;
+            bool negativ = false;
+            foreach (int num in array)
+            {
+                if (num < 0)
+                {
+                    product *= num;
+                    negativ = true;
+                }
+            }
+            if (negativ)
+            {
+                Console.WriteLine($"Произведение отрицательных элементов: {product}");
+            }
+            else
+            {
+                Console.WriteLine("Произведение отрицательных элементов нет");
+            }
         }
     }
 }
