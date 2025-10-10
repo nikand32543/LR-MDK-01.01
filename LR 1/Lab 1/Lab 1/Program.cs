@@ -8,9 +8,9 @@ namespace Lab_1
         {
             // С клавиатуры ввести массив из n целых чисел. Найти произведение отрицательных элементов
             Console.WriteLine("Введите размер массива ");
-            int razArray = Convert.ToInt32(Console.ReadLine());
-            int[] array = new int[razArray];
-            for (int i = 0; i < razArray; i++)
+            int sizeArray = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[sizeArray];
+            for (int i = 0; i < sizeArray; i++)
             {
                 array[i] = Convert.ToInt32(Console.ReadLine());
             }
