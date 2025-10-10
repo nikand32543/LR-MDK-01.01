@@ -10,7 +10,7 @@ namespace Lab_2
             Random r = new Random();
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = r.Next(-1000, 1000);
+                array[i] = r.Next(-1000, 1001);
             }
             foreach(int element in array)
             {
