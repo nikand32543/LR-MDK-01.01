@@ -14,19 +14,19 @@ namespace Lab_1
             {
                 array[i] = Convert.ToInt32(Console.ReadLine());
             }
-            int product = 1;
+            int result = 1;
             bool negativ = false;
             foreach (int num in array)
             {
                 if (num < 0)
                 {
-                    product *= num;
+                    result *= num;
                     negativ = true;
                 }
             }
             if (negativ)
             {
-                Console.WriteLine($"Произведение отрицательных элементов: {product}");
+                Console.WriteLine($"Произведение отрицательных элементов: {result}");
             }
             else
             {
