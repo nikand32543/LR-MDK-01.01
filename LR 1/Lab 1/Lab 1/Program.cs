@@ -30,7 +30,7 @@ namespace Lab_1
             }
             else
             {
-                Console.WriteLine("Произведение отрицательных элементов нет");
+                Console.WriteLine("Отрицательных элементов в массиве нет");
             }
         }
     }
