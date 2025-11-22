@@ -9,7 +9,8 @@ namespace StructProject
 
         static public List<double> VectorLenght(Vector[] allVectors)
         {
-
+            List<double> CalcVector = new List<double>();
+            for (int i = 0; i < allVectors)
         }
     }
 }
