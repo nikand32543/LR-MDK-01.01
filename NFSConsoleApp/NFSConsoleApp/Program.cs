@@ -1,6 +1,7 @@
 ﻿
 
 using System;
+using System.Collections.Generic;
 
 namespace NFSConsoleApp
 {
@@ -12,16 +13,19 @@ namespace NFSConsoleApp
         }
         static void Main()
         {
-            Car auto = new Car();
+            Car auto = new Car(); /// объект Лада
             auto.SetModel("Лада");
             auto.SetSpeed(150);
             Print(auto);
 
-            Car merc = new Car();
+            Car merc = new Car(); /// объект Merc
             merc.SetModel("Merc");
             merc.SetSpeed(300);
             Print(merc);
 
+            List<Car> cars = new List<Car>(); /// Список для хранения объектов
+            cars.Add(auto);
+            cars.Add(merc);
         }
     }
 }
