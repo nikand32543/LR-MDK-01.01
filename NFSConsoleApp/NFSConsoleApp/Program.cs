@@ -1,5 +1,7 @@
 ﻿
 
+using System;
+
 namespace NFSConsoleApp
 {
     class Program
@@ -8,7 +10,7 @@ namespace NFSConsoleApp
         {
             Car auto = new Car();
             auto.SetModel("Лада");
-            
+            Console.WriteLine(auto.GetModel());
         }
     }
 }
