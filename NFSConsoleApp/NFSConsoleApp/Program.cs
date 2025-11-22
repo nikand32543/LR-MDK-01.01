@@ -4,9 +4,11 @@ namespace NFSConsoleApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-
+            Car auto = new Car();
+            auto.SetModel("Лада");
+            
         }
     }
 }
