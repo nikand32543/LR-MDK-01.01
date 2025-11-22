@@ -15,5 +15,13 @@ namespace NFSConsoleApp
         {
             model_ = model;
         }
+        public int GetSpeed()
+        {
+            return speed_;
+        }
+        public void SetSpeed(int speed)
+        {
+            speed_ = speed;
+        }
     }
 }
