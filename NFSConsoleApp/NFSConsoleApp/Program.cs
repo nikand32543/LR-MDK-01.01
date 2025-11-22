@@ -11,6 +11,7 @@ namespace NFSConsoleApp
             Car auto = new Car();
             auto.SetModel("Лада");
             Console.WriteLine(auto.GetModel());
+
         }
     }
 }
