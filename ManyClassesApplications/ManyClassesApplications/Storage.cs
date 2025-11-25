@@ -1,5 +1,6 @@
 ﻿
 
+using System;
 using System.Collections.Generic;
 
 namespace ManyClassesApplications
@@ -8,7 +9,7 @@ namespace ManyClassesApplications
     {
         private int identifier_; /// идентификатор
         private string location_; /// локация
-        private Dictionary<Product, int> products_; /// Словарь с ключом Product
+        private Dictionary<Product, int> products_ = new Dictionary<Product, int>(); /// Словарь с ключом Product
 
         public void SetIdentifier(int identifier) /// Метод добавления идентификатора
         {
@@ -22,5 +23,13 @@ namespace ManyClassesApplications
         {
             products_.Add(product, quantity);
         }
+        public void Print() /// 
+        {
+            foreach(Product key in products_.Keys)
+            {
+                Console.WriteLine(key.GetName() + " " + products_[key] + " шт.");
+            }
+        }
+        
     }
 }
