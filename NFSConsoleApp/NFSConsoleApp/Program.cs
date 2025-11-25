@@ -43,7 +43,7 @@ namespace NFSConsoleApp
                     }
                     Console.Write(s.GetModel());
                     Console.WriteLine();
-                    Console.WriteLine("-------------------------------------------------------")
+                    Console.WriteLine("-------------------------------------------------------");
                     speed++;
                 }
                 Thread.Sleep(60);
