@@ -21,7 +21,7 @@ namespace ManyClasses
         {
             foreach(ReportRow row in rows_)
             {
-                ConvertReportToString(row) + "\n";
+                ConvertReportToString(row);
             }
         }
         public void CalculateSum()
