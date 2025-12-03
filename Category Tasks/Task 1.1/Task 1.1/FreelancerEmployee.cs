@@ -1,13 +1,13 @@
 ﻿
 namespace Task_1._1
 {
-    public class FreelancerEmployee
+    public class FreelancerEmployee /// класс фрилансер
     {
-        private Employee Employee_;
+        private Employee Employee_; /// поля
         private double ProjectPayment_;
         private double TaxPercent_;
 
-        public void SetProjectPayment(double ProjectPayment)
+        public void SetProjectPayment(double ProjectPayment) /// методы для получения данных
         {
             ProjectPayment_ = ProjectPayment;
         }

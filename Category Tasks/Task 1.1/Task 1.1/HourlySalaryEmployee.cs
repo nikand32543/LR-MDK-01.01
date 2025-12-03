@@ -1,13 +1,13 @@
 ﻿
 namespace Task_1._1
 {
-    public class HourlySalaryEmployee
+    public class HourlySalaryEmployee /// класс работник с почасовой оплатой
     {
-        private Employee Employee_;
+        private Employee Employee_; /// поля
         private double salarPenHour_;
         private int hoursWorked_;
         private int overtimeHours_;
-        public void SetEmployee(Employee Employees)
+        public void SetEmployee(Employee Employees) /// методы
         {
             Employee_ = Employees;
         }
