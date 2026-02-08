@@ -37,12 +37,14 @@
             this.QuantityLable = new System.Windows.Forms.Label();
             this.OrderButton = new System.Windows.Forms.Button();
             this.GroupComboBox = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.QuantityTextBox = new System.Windows.Forms.TextBox();
+            this.BasketRichTextBox = new System.Windows.Forms.RichTextBox();
             this.priceLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.ExpirationLabel = new System.Windows.Forms.Label();
+            this.SuppLabel = new System.Windows.Forms.Label();
+            this.ManufacLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.DescriptionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MedPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +58,7 @@
             this.MedicinesListBox.Name = "MedicinesListBox";
             this.MedicinesListBox.Size = new System.Drawing.Size(169, 554);
             this.MedicinesListBox.TabIndex = 0;
+            this.MedicinesListBox.SelectedIndexChanged += new System.EventHandler(this.MedicinesListBox_SelectedIndexChanged);
             // 
             // MedPictureBox
             // 
@@ -63,6 +66,7 @@
             this.MedPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.MedPictureBox.Name = "MedPictureBox";
             this.MedPictureBox.Size = new System.Drawing.Size(604, 400);
+            this.MedPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MedPictureBox.TabIndex = 1;
             this.MedPictureBox.TabStop = false;
             // 
@@ -131,30 +135,32 @@
             this.OrderButton.TabIndex = 8;
             this.OrderButton.Text = "Заказать";
             this.OrderButton.UseVisualStyleBackColor = true;
+            this.OrderButton.Click += new System.EventHandler(this.OrderButton_Click);
             // 
             // GroupComboBox
             // 
             this.GroupComboBox.FormattingEnabled = true;
-            this.GroupComboBox.Location = new System.Drawing.Point(182, 13);
+            this.GroupComboBox.Location = new System.Drawing.Point(176, 0);
             this.GroupComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.GroupComboBox.Name = "GroupComboBox";
             this.GroupComboBox.Size = new System.Drawing.Size(160, 24);
             this.GroupComboBox.TabIndex = 9;
+            this.GroupComboBox.SelectedIndexChanged += new System.EventHandler(this.GroupComboBox_SelectedIndexChanged);
             // 
-            // textBox1
+            // QuantityTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(623, 439);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(118, 22);
-            this.textBox1.TabIndex = 10;
+            this.QuantityTextBox.Location = new System.Drawing.Point(623, 439);
+            this.QuantityTextBox.Name = "QuantityTextBox";
+            this.QuantityTextBox.Size = new System.Drawing.Size(118, 22);
+            this.QuantityTextBox.TabIndex = 10;
             // 
-            // richTextBox1
+            // BasketRichTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(182, 313);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(274, 187);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = "";
+            this.BasketRichTextBox.Location = new System.Drawing.Point(176, 367);
+            this.BasketRichTextBox.Name = "BasketRichTextBox";
+            this.BasketRichTextBox.Size = new System.Drawing.Size(274, 187);
+            this.BasketRichTextBox.TabIndex = 11;
+            this.BasketRichTextBox.Text = "";
             // 
             // priceLabel
             // 
@@ -165,44 +171,66 @@
             this.priceLabel.TabIndex = 12;
             this.priceLabel.Text = "Label1";
             // 
-            // label2
+            // ExpirationLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(338, 147);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "label2";
+            this.ExpirationLabel.AutoSize = true;
+            this.ExpirationLabel.Location = new System.Drawing.Point(338, 147);
+            this.ExpirationLabel.Name = "ExpirationLabel";
+            this.ExpirationLabel.Size = new System.Drawing.Size(44, 16);
+            this.ExpirationLabel.TabIndex = 13;
+            this.ExpirationLabel.Text = "label2";
             // 
-            // label3
+            // SuppLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(307, 195);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "label3";
+            this.SuppLabel.AutoSize = true;
+            this.SuppLabel.Location = new System.Drawing.Point(307, 195);
+            this.SuppLabel.Name = "SuppLabel";
+            this.SuppLabel.Size = new System.Drawing.Size(44, 16);
+            this.SuppLabel.TabIndex = 14;
+            this.SuppLabel.Text = "label3";
             // 
-            // label4
+            // ManufacLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(349, 243);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "label4";
+            this.ManufacLabel.AutoSize = true;
+            this.ManufacLabel.Location = new System.Drawing.Point(349, 243);
+            this.ManufacLabel.Name = "ManufacLabel";
+            this.ManufacLabel.Size = new System.Drawing.Size(44, 16);
+            this.ManufacLabel.TabIndex = 15;
+            this.ManufacLabel.Text = "label4";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(177, 290);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 25);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Описание:";
+            // 
+            // DescriptionLabel
+            // 
+            this.DescriptionLabel.AutoSize = true;
+            this.DescriptionLabel.Location = new System.Drawing.Point(298, 297);
+            this.DescriptionLabel.Name = "DescriptionLabel";
+            this.DescriptionLabel.Size = new System.Drawing.Size(44, 16);
+            this.DescriptionLabel.TabIndex = 17;
+            this.DescriptionLabel.Text = "label4";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.DescriptionLabel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ManufacLabel);
+            this.Controls.Add(this.SuppLabel);
+            this.Controls.Add(this.ExpirationLabel);
             this.Controls.Add(this.priceLabel);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.BasketRichTextBox);
+            this.Controls.Add(this.QuantityTextBox);
             this.Controls.Add(this.GroupComboBox);
             this.Controls.Add(this.OrderButton);
             this.Controls.Add(this.QuantityLable);
@@ -213,6 +241,7 @@
             this.Controls.Add(this.MedPictureBox);
             this.Controls.Add(this.MedicinesListBox);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Лекарственные средства";
             ((System.ComponentModel.ISupportInitialize)(this.MedPictureBox)).EndInit();
@@ -232,12 +261,14 @@
         private System.Windows.Forms.Label QuantityLable;
         private System.Windows.Forms.Button OrderButton;
         private System.Windows.Forms.ComboBox GroupComboBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox QuantityTextBox;
+        private System.Windows.Forms.RichTextBox BasketRichTextBox;
         private System.Windows.Forms.Label priceLabel;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label ExpirationLabel;
+        private System.Windows.Forms.Label SuppLabel;
+        private System.Windows.Forms.Label ManufacLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label DescriptionLabel;
     }
 }
 

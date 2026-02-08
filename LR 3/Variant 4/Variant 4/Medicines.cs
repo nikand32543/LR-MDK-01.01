@@ -12,14 +12,18 @@ namespace Variant_4
         private string photo_;
         private string description_;
         private DateTime shelfLifeDate_;
+        private string supplier_;
+        private string manufacturer_;
 
-        public Medicines(string name, double price, string photo, string description, DateTime date)
+        public Medicines(string name, double price, string photo, string description, DateTime date, string supplier, string manufacturer)
         {
             name_ = name;
             price_ = price;
             photo_ = photo;
             description_ = description;
             shelfLifeDate_ = date;
+            supplier_ = supplier;
+            manufacturer_ = manufacturer;
         }
 
         public string Name
@@ -41,9 +45,17 @@ namespace Variant_4
         {
             get { return description_; }
         }
-        public DateTime Date
+        public string Date
         {
-            get { return shelfLifeDate_; }
+            get { return shelfLifeDate_.ToString("MM.yyyy"); }
+        }
+        public string Supplier
+        {
+            get { return supplier_; } 
+        }
+        public string Manufacturer
+        { 
+            get { return manufacturer_; }
         }
     }
 }
