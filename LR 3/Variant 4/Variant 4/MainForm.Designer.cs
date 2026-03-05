@@ -65,7 +65,7 @@
             this.MedPictureBox.Location = new System.Drawing.Point(463, 0);
             this.MedPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.MedPictureBox.Name = "MedPictureBox";
-            this.MedPictureBox.Size = new System.Drawing.Size(604, 400);
+            this.MedPictureBox.Size = new System.Drawing.Size(604, 289);
             this.MedPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MedPictureBox.TabIndex = 1;
             this.MedPictureBox.TabStop = false;
@@ -74,7 +74,7 @@
             // 
             this.CostLabel.AutoSize = true;
             this.CostLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CostLabel.Location = new System.Drawing.Point(177, 89);
+            this.CostLabel.Location = new System.Drawing.Point(177, 107);
             this.CostLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CostLabel.Name = "CostLabel";
             this.CostLabel.Size = new System.Drawing.Size(125, 25);
@@ -85,7 +85,7 @@
             // 
             this.ManufacturerLabel.AutoSize = true;
             this.ManufacturerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ManufacturerLabel.Location = new System.Drawing.Point(177, 236);
+            this.ManufacturerLabel.Location = new System.Drawing.Point(177, 254);
             this.ManufacturerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ManufacturerLabel.Name = "ManufacturerLabel";
             this.ManufacturerLabel.Size = new System.Drawing.Size(165, 25);
@@ -96,7 +96,7 @@
             // 
             this.ExpirationDateLabel.AutoSize = true;
             this.ExpirationDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ExpirationDateLabel.Location = new System.Drawing.Point(177, 140);
+            this.ExpirationDateLabel.Location = new System.Drawing.Point(177, 158);
             this.ExpirationDateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ExpirationDateLabel.Name = "ExpirationDateLabel";
             this.ExpirationDateLabel.Size = new System.Drawing.Size(154, 25);
@@ -107,7 +107,7 @@
             // 
             this.SupplierLabel.AutoSize = true;
             this.SupplierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SupplierLabel.Location = new System.Drawing.Point(177, 188);
+            this.SupplierLabel.Location = new System.Drawing.Point(177, 206);
             this.SupplierLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SupplierLabel.Name = "SupplierLabel";
             this.SupplierLabel.Size = new System.Drawing.Size(123, 25);
@@ -165,7 +165,7 @@
             // priceLabel
             // 
             this.priceLabel.AutoSize = true;
-            this.priceLabel.Location = new System.Drawing.Point(309, 96);
+            this.priceLabel.Location = new System.Drawing.Point(309, 114);
             this.priceLabel.Name = "priceLabel";
             this.priceLabel.Size = new System.Drawing.Size(48, 16);
             this.priceLabel.TabIndex = 12;
@@ -174,7 +174,7 @@
             // ExpirationLabel
             // 
             this.ExpirationLabel.AutoSize = true;
-            this.ExpirationLabel.Location = new System.Drawing.Point(338, 147);
+            this.ExpirationLabel.Location = new System.Drawing.Point(338, 165);
             this.ExpirationLabel.Name = "ExpirationLabel";
             this.ExpirationLabel.Size = new System.Drawing.Size(44, 16);
             this.ExpirationLabel.TabIndex = 13;
@@ -183,7 +183,7 @@
             // SuppLabel
             // 
             this.SuppLabel.AutoSize = true;
-            this.SuppLabel.Location = new System.Drawing.Point(307, 195);
+            this.SuppLabel.Location = new System.Drawing.Point(307, 213);
             this.SuppLabel.Name = "SuppLabel";
             this.SuppLabel.Size = new System.Drawing.Size(44, 16);
             this.SuppLabel.TabIndex = 14;
@@ -192,7 +192,7 @@
             // ManufacLabel
             // 
             this.ManufacLabel.AutoSize = true;
-            this.ManufacLabel.Location = new System.Drawing.Point(349, 243);
+            this.ManufacLabel.Location = new System.Drawing.Point(349, 261);
             this.ManufacLabel.Name = "ManufacLabel";
             this.ManufacLabel.Size = new System.Drawing.Size(44, 16);
             this.ManufacLabel.TabIndex = 15;
@@ -202,7 +202,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(177, 290);
+            this.label1.Location = new System.Drawing.Point(177, 308);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 25);
@@ -212,7 +212,7 @@
             // DescriptionLabel
             // 
             this.DescriptionLabel.AutoSize = true;
-            this.DescriptionLabel.Location = new System.Drawing.Point(298, 297);
+            this.DescriptionLabel.Location = new System.Drawing.Point(298, 315);
             this.DescriptionLabel.Name = "DescriptionLabel";
             this.DescriptionLabel.Size = new System.Drawing.Size(44, 16);
             this.DescriptionLabel.TabIndex = 17;
@@ -222,6 +222,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.DescriptionLabel);
             this.Controls.Add(this.label1);
