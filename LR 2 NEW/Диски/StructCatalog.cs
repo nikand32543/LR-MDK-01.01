@@ -1,7 +1,7 @@
 ﻿
 namespace Диски
 {
-    public struct catalog
+    public class catalog
     {
         public string name; /// название каталога
         public int year; /// год создания каталога
