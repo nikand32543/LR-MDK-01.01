@@ -33,6 +33,7 @@ namespace Диски
             else
             {
                 Console.WriteLine("Указан несуществующий диск выберите один из предложенных: (Диск C, Диск D)");
+                return null;
             }
             return Yearthese;
         }
@@ -51,7 +52,7 @@ namespace Диски
                         Yearthese[j + 1] = temp;
                     }
                 }
-                // Вывод отсортированного списка
+                
             }
         }
         static public int AverageNumberRequest(List<catalog> Yearthese) // среднее количество обращений
@@ -61,7 +62,7 @@ namespace Диски
             {
                 temp += catalog.requests;
             }
-            int result = temp / 5;
+            int result = temp / Yearthese.Count;
             return result;
 
         }

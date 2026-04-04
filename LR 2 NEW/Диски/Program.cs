@@ -20,7 +20,7 @@ namespace Диски
 
             List<catalog> C = new List<catalog>();
 
-
+            
             C.Add(new catalog { name = "User", year = 2025, requests = 15 }); // идет заполнение диска C
             C.Add(new catalog { name = "Windows", year = 2025, requests = 32 });
             C.Add(new catalog { name = "Admin", year = 2025, requests = 20 });
@@ -40,14 +40,19 @@ namespace Диски
             D.Add(new catalog { name = "DOS", year = 2025, requests = 26 });
 
             Disk disk_C = new Disk(); // Диск C
-            disk_C.Name = "Диск C";
+            disk_C.Name = "C";
             disk_C.catalogs = C;
             Disk disk_D = new Disk(); // Диск D
-            disk_D.Name = "Диск D";
+            disk_D.Name = "D";
             disk_D.catalogs = D;
 
-            string user = userRequest.InputUserRequest();
-            List<catalog> Yearthese = DateAnalysisModule.СataloguesThisYear(disk_C, disk_D, user);
+            string user;
+            List<catalog> Yearthese = new List<catalog>();
+            do
+            {
+                user = userRequest.InputUserRequest();
+                Yearthese = DateAnalysisModule.СataloguesThisYear(disk_C, disk_D, user);
+            }while (Yearthese == null);
             DateAnalysisModule.SortDescendingOrder(Yearthese);
             int countRequest = DateAnalysisModule.AverageNumberRequest(Yearthese);
             Print(Yearthese, countRequest);
