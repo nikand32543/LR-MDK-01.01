@@ -44,7 +44,7 @@ namespace Диски
             {
                 for (int j = 0; j < Yearthese.Count - 1; j++)
                 {
-                    if (Yearthese[j].requests > Yearthese[j + 1].requests)
+                    if (Yearthese[j].requests < Yearthese[j + 1].requests)
                     {
                         temp = Yearthese[j];
                         Yearthese[j] = Yearthese[j + 1];
