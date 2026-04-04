@@ -26,6 +26,8 @@ namespace Диски
             C.Add(new catalog { name = "Admin", year = 2025, requests = 20 });
             C.Add(new catalog { name = "Пользователи", year = 2025, requests = 52 });
             C.Add(new catalog { name = "Programs Files", year = 2025, requests = 12 });
+            C.Add(new catalog { name = "asm", year = 2025, requests = 25 });
+            C.Add(new catalog { name = "Intel", year = 2025, requests = 32 });
 
             List<catalog> D = new List<catalog>();
 
@@ -34,7 +36,8 @@ namespace Диски
             D.Add(new catalog { name = "War Thunder", year = 2025, requests = 230 });
             D.Add(new catalog { name = "Музыка", year = 2025, requests = 143 });
             D.Add(new catalog { name = "Steam", year = 2025, requests = 1000 });
-
+            D.Add(new catalog { name = "Vertrigo", year = 2025, requests = 322 });
+            D.Add(new catalog { name = "DOS", year = 2025, requests = 26 });
 
             Disk disk_C = new Disk(); // Диск C
             disk_C.Name = "Диск C";
