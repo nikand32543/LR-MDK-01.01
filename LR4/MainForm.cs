@@ -14,41 +14,58 @@ namespace LR4
     {
         PgBookingsLoader loader = new PgBookingsLoader();
 
-
         public MainForm()
         {
             InitializeComponent();
-            dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            LoadBookings();
 
-            BindingList<Booking> booking = loader.Load();
-            dataGridView.DataSource = booking;
+            CreateButton.Click += CreateButton_Click;
+            Edit.Click += Edit_Click;
+            deleteButton.Click += deleteButton_Click;
+        }
+
+        private void LoadBookings()
+        {
+            dataGridView.DataSource = loader.Load();
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
+            if (dataGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Выберите запись!");
+                return;
+            }
 
-            DataGridViewRow row = dataGridView.SelectedRows[0];
-            Booking user = row.DataBoundItem as Booking;
-            loader.DeleteSelectedBooking(user.Login);
+            Booking booking = dataGridView.SelectedRows[0].DataBoundItem as Booking;
 
+            if (MessageBox.Show("Удалить?", "Подтверждение", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                loader.DeleteSelectedBooking(booking.FullName, booking.CheckInDate, booking.RoomNumber);
+                LoadBookings();
+            }
         }
-
-        
 
         private void CreateButton_Click(object sender, EventArgs e)
         {
             AddBooking addBooking = new AddBooking(loader);
-            AddBooking.Show();
-
+            addBooking.ShowDialog();
+            LoadBookings();
         }
 
         private void Edit_Click(object sender, EventArgs e)
         {
-            DataGridViewRow row = dataGridView.SelectedRows[0];
-            User selectedUser = row.DataBoundItem as User;
-            AddUsers editUser = new AddUsers(loader);
-            editUser.SetUser(selectedUser);
-            editUser.Show();
+            if (dataGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Выберите запись!");
+                return;
+            }
+
+            Booking selectedBooking = dataGridView.SelectedRows[0].DataBoundItem as Booking;
+            AddBooking editBooking = new AddBooking(loader);
+            editBooking.SetBooking(selectedBooking);
+            editBooking.ShowDialog();
+            LoadBookings();
         }
     }
 }

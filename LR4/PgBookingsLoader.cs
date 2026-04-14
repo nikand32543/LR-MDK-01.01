@@ -12,12 +12,14 @@ namespace LR4
     public class PgBookingsLoader
     {
         private BindingList<Booking> result_ = new BindingList<Booking>();
-        private const string connectSetting = "Host=192.168.1.48;Username=st53-10;Password=PG@dmin$;Database=LR4_DB_Andrianov";
+        private const string connectSetting = "Host=192.168.1.48;Username=st53-4;Password=534;Database=LR4_DB_Andrianov";
 
         public BindingList<Booking> Load()
         {
             try
             {
+                result_.Clear();  
+
                 using (var con = new NpgsqlConnection(connectSetting))
                 {
                     con.Open();
